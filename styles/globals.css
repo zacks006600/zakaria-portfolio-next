@@ -1,0 +1,123 @@
+@import "tailwindcss";
+
+:root {
+  --background: #ffffff;
+  --foreground: #171717;
+}
+
+@font-face {
+  font-family: "Bergamasco";
+  src: url("/fonts/bergamasco/Bergamasco-Bold.ttf") format("truetype");
+  font-weight: 700;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Bergamasco";
+  src: url("/fonts/bergamasco/Bergamasco-Regular.ttf") format("truetype");
+  font-weight: 400;
+  font-style: normal;
+}
+
+/* @media (prefers-color-scheme: dark) {
+  :root {
+    --background: #0a0a0a;
+    --foreground: #ededed;
+  }
+} */
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: "Bergamasco", var(--font-sans), sans-serif;
+  overflow-x: hidden;
+}
+#wrapper {
+  overflow: hidden;
+  position: fixed;
+  height: 100%;
+  width: 100%;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+
+#content {
+  overflow: visible;
+  width: 100%;
+}
+
+.text {
+  position: fixed;
+  top: 20%;
+  text-align: center;
+  width: 100%;
+  transform: translateY(-100%);
+  z-index: 2;
+  color: #000;
+  -webkit-text-stroke-width: 1.5px;
+  -webkit-text-stroke-color: #000;
+  z-index: -2;
+  left: 0;
+}
+
+.outline-text {
+  color: transparent;
+  -webkit-text-stroke-width: 1.5px;
+  -webkit-text-stroke-color: #000;
+  z-index: 2;
+}
+
+.filter-text {
+  mix-blend-mode: screen;
+  color: #000;
+  z-index: 2;
+}
+
+.images {
+  padding-top: 20vh;
+  position: relative;
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  min-height: 150vh;
+  display: grid;
+  grid-template-columns: repeat(20, 2%);
+  grid-template-rows: repeat(30, 3%);
+  justify-content: center;
+  justify-items: center;
+  align-items: center;
+  z-index: 1;
+}
+
+.images img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.images img:nth-child(1) {
+  grid-area: 1/1/6/8;
+}
+.images img:nth-child(2) {
+  grid-area: 3/12/8/20;
+}
+.images img:nth-child(3) {
+  grid-area: 9/5/13/15;
+}
+.images img:nth-child(4) {
+  grid-area: 14/1/18/8;
+}
+.images img:nth-child(5) {
+  grid-area: 16/12/20/19;
+}
+.images img:nth-child(6) {
+  grid-area: 20/2/25/9;
+}
+.images img:nth-child(7) {
+  grid-area: 22/11/24/20;
+}
+.images img:nth-child(8) {
+  grid-area: 26/5/30/15;
+}
